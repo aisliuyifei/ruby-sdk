@@ -184,14 +184,14 @@ module Qiniu
         token_obj = UploadToken.new(opts)
         token_obj.access_key = Config.settings[:access_key]
         token_obj.secret_key = Config.settings[:secret_key]
-        #token_obj.scope = opts[:scope]
-        #token_obj.expires_in = opts[:expires_in]
-        #token_obj.callback_url = opts[:callback_url]
-        #token_obj.callback_body_type = opts[:callback_body_type]
-        #token_obj.customer = opts[:customer]
-        #token_obj.escape = opts[:escape]
-        #token_obj.async_options = opts[:async_options]
-        #token_obj.return_body = opts[:return_body]
+        token_obj.scope = opts[:scope]
+        token_obj.expires_in = opts[:expires_in]
+        token_obj.callback_url = opts[:callback_url]
+        token_obj.callback_body_type = opts[:callback_body_type]
+        token_obj.customer = opts[:customer]
+        token_obj.escape = opts[:escape]
+        token_obj.async_options = opts[:async_options]
+        token_obj.return_body = opts[:return_body]
         token_obj.generate_token
       end
 
